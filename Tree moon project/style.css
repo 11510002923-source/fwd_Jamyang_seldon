@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #10151d;
+    color: white;
+}
+
+.main {
+    min-height: 100vh;
+
+    /* The image path is relative to this CSS file. */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("image/Tree_moon.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: min(1200px, 92%);
+    min-height: 90px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #ff7200;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    width: 190px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ff7200;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+}
+
+.search input::placeholder {
+    color: #eee;
+}
+
+.search button {
+    height: 40px;
+    padding: 0 23px;
+    border: 1px solid #ff7200;
+    border-radius: 0 5px 5px 0;
+    background: #ff7200;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.content {
+    width: min(1200px, 92%);
+    margin: 80px auto 0;
+    padding-bottom: 60px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.introduction {
+    max-width: 700px;
+    padding-top: 10px;
+}
+
+.introduction h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    line-height: 1.12;
+    letter-spacing: 2px;
+}
+
+.introduction h1 span {
+    color: #ff7200;
+    font-size: 65px;
+}
+
+.introduction p {
+    max-width: 640px;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+}
+
+.join-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 45px;
+    border-radius: 10px;
+    background: #ff7200;
+    color: #111;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.join-button:hover {
+    background: white;
+}
+
+.login-card {
+    flex: 0 0 300px;
+    padding: 25px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+}
+
+.login-card h2 {
+    padding: 9px;
+    border-radius: 10px;
+    background: white;
+    color: #ff7200;
+    font-size: 22px;
+}
+
+.login-card input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-top: 25px;
+    border: 0;
+    border-bottom: 1px solid #ff7200;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.login-card input::placeholder {
+    color: white;
+}
+
+input:focus-visible {
+    outline: 2px solid #ffb16f;
+    outline-offset: 4px;
+}
+
+.login-button {
+    width: 100%;
+    height: 42px;
+    margin-top: 30px;
+    border: 0;
+    border-radius: 10px;
+    background: #ff7200;
+    color: #111;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: white;
+    color: #ff7200;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.signup a {
+    color: #ff7200;
+    text-decoration: none;
+}
+
+.social-heading {
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#login-message {
+    margin-top: 15px;
+    color: #ffbb86;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#login-message:empty {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Tablet layout */
+@media (max-width: 1050px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+
+    .content {
+        margin-top: 40px;
+        gap: 35px;
+    }
+
+    .introduction h1 {
+        font-size: 42px;
+    }
+
+    .introduction h1 span {
+        font-size: 50px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .introduction h1 {
+        font-size: 38px;
+    }
+
+    .introduction h1 span {
+        font-size: 43px;
+    }
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+    .login-card {
+        flex: auto;
+        width: 100%;
+        max-width: 350px;
+        margin: 10px auto 0;
+    }
+}

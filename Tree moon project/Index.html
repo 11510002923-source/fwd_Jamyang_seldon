@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <header class="navbar">
+            <a class="logo" href="#">PraRoz</a>
+
+            <nav aria-label="Main navigation">
+                <a href="#">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#service">SERVICE</a>
+                <a href="#design">DESIGN</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+
+            <form class="search" role="search">
+                <input
+                    type="search"
+                    name="search"
+                    placeholder="Type to Search"
+                    aria-label="Search website"
+                >
+                <button type="submit">Search</button>
+            </form>
+        </header>
+
+        <section class="content">
+            <div class="introduction">
+                <h1>
+                    Web Design &amp;<br>
+                    <span>Development</span><br>
+                    Course
+                </h1>
+
+                <p>
+                    Web design is a specialisation of the design stream.
+                    Learn to create attractive websites using HTML and CSS,
+                    and build your skills in modern web development.
+                </p>
+
+                <a href="#login" class="join-button">JOIN US</a>
+            </div>
+
+            <form class="login-card" id="login">
+                <h2>Login Here</h2>
+
+                <label class="sr-only" for="email">Email address</label>
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email Here"
+                    autocomplete="email"
+                    required
+                >
+
+                <label class="sr-only" for="password">Password</label>
+                <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password Here"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button class="login-button" type="submit">Login</button>
+
+                <p class="signup">
+                    Don't have an account?<br>
+                    <a href="#signup">Sign up</a> here
+                </p>
+
+                <p class="social-heading">Log in with</p>
+
+                <div class="social-icons" aria-label="Social platforms">
+                    <span title="Facebook">f</span>
+                    <span title="Instagram">◎</span>
+                    <span title="Twitter">𝕏</span>
+                    <span title="Google">G</span>
+                    <span title="Skype">S</span>
+                </div>
+
+                <p id="login-message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Demonstration only: real login requires a backend.
+        document.querySelector(".login-card").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+
+                document.getElementById("login-message").textContent =
+                    "Demo only. Connect a backend to enable login.";
+            }
+        );
+
+        document.querySelector(".search").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+
+                const query = this.elements.search.value.trim();
+
+                if (query) {
+                    alert("You searched for: " + query);
+                }
+            }
+        );
+    </script>
+</body>
+</html>
